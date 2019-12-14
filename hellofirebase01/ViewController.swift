@@ -11,15 +11,39 @@ import Firebase
 
 class ViewController: UIViewController {
     
+    var mAuth:Auth!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        Auth.auth().signInAnonymously { (user, error) in
+
+        mAuth = Auth.auth()
+        mAuth.addStateDidChangeListener { (auth, user) in
+            if let user = user{
+                print("======================")
+            }else{
+                print("0000000000000000000000")
+            }
+        }
+        
+        
+    }
+    @IBAction func login01(_ sender: Any) {
+        mAuth.signInAnonymously { (user, error) in
             if error != nil {
                 print(error?.localizedDescription)
-            }else{
-                print(user.debugDescription)
             }
         }
     }
+    
+    @IBAction func logout(_ sender: Any) {
+        do {
+            try mAuth.signOut()
+        } catch  {
+            print(error.localizedDescription)
+        }
+    }
+    
+    
+    
 }
 
