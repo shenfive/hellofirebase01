@@ -54,6 +54,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="googleSignButton" destination="mkd-rO-vpj" id="Evi-bn-pj3"/>
                         <outlet property="loginStatus" destination="HzM-bA-DL8" id="gIA-du-99k"/>
                     </connections>
                 </viewController>

@@ -8,15 +8,22 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class ViewController: UIViewController {
     
     var mAuth:Auth!
     
     @IBOutlet weak var loginStatus: UILabel!
+    @IBOutlet weak var googleSignButton: GIDSignInButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Google Sing in Login
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
+
+        
         mAuth = Auth.auth()
         mAuth.addStateDidChangeListener { (auth, user) in
             if let user = user{
@@ -44,7 +51,6 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-    
     
     
 }
