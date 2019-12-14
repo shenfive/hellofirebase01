@@ -29,6 +29,16 @@ class ViewController: UIViewController {
             if let user = user{
                 print("======================")
                 self.loginStatus.text = "己成功登入"
+                if let userName = user.displayName{
+                    self.loginStatus.text = "己成功登入:\(userName)"
+                    let alert = UIAlertController(title: "歡迎", message: "\(userName) 己成功登入", preferredStyle:  .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                
+                
+                
             }else{
                 self.loginStatus.text = "己登出"
             }

@@ -42,7 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
       let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                         accessToken: authentication.accessToken)
-      // ...
+        Auth.auth().signIn(with: credential) { (auth, error) in
+            
+        }
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
