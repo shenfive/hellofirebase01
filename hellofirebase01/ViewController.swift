@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     var mAuth:Auth!
     
+    @IBOutlet weak var loginStatus: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,8 +21,9 @@ class ViewController: UIViewController {
         mAuth.addStateDidChangeListener { (auth, user) in
             if let user = user{
                 print("======================")
+                self.loginStatus.text = "己成功登入"
             }else{
-                print("000000000000000000000000d")
+                self.loginStatus.text = "己登出"
             }
         }
         
