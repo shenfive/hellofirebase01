@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,7 +50,6 @@
 				678A235F6BEE7EE5E3CCA651 /* Pods-hellofirebase01.debug.xcconfig */,
 				58D3C406F2511E8E55F1CA41 /* Pods-hellofirebase01.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -107,6 +106,7 @@
 				BAFE0C2C23A47CD30033C39A /* Frameworks */,
 				BAFE0C2D23A47CD30033C39A /* Resources */,
 				A4AA354E0B218D8A6241DDD9 /* [CP] Embed Pods Frameworks */,
+				7B036FA9AC9103E8C191B7AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +165,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7B036FA9AC9103E8C191B7AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hellofirebase01/Pods-hellofirebase01-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hellofirebase01/Pods-hellofirebase01-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hellofirebase01/Pods-hellofirebase01-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8374066048CAF5D83FF070A6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
